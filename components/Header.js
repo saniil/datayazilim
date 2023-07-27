@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "./Button";
 
 const HeaderDiv = styled.div`
-  background-color: #000;
+  background-color: gray;
 `;
 const HeaderInline = styled.div`
   max-width: 800px;
@@ -12,8 +12,7 @@ const HeaderInline = styled.div`
   margin: auto;
 `;
 const HeaderUst = styled.div`
-  background-color: black;
-  color: white;
+  color: black;
   display: flex;
   margin: auto;
   max-width: 1400px;
@@ -31,12 +30,21 @@ const HeaderUstB = styled.div`
   display: flex;
   margin-top: 20px;
 `;
+const IconIcın = styled.div`
+  display: flex;
+`;
 
 export default () => (
   <HeaderDiv>
     <HeaderUst>
       <HeaderUstA>
-        <div className="birinci">Karabağlar/İzmir</div>
+        <IconIcın>
+          <img
+            style={{ width: "20px", height: "15px" }}
+            src={`../icons/gps.svg`}
+          ></img>
+          <div className="birinci">Karabağlar/İzmir</div>
+        </IconIcın>
         <div className="ikinci">bilgi@datayazilim.com.tr</div>
         <div className="ikinci">+90 232 464 23 83</div>
       </HeaderUstA>
