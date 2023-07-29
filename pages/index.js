@@ -4,7 +4,7 @@ import SecondPage from "../components/SecondPage";
 
 export default function Home() {
   return (
-    <div>
+    <div id="home">
       <Header />
       <FirstPage></FirstPage>
       <SecondPage></SecondPage>
