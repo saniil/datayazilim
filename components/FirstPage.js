@@ -7,7 +7,7 @@ const Ana = styled.div`
 `;
 const Info = styled.div`
   font-family: "Bree Serif", serif;
-  font-size: 40px;
+  font-size: 20px;
   color: black;
   width: 50vw;
   text-align: center;
@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <Ana>
       <Head>
-        <img style={{ width: "50vw" }} src={`../icons/logo.svg`}></img>
+        <img style={{ width: "30vw" }} src={`../icons/logo.svg`}></img>
 
         <Info>
           Data Yazılım, yılların bilgi birikimini sizlerden gelen taleplerle
