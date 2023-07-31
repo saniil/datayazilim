@@ -145,8 +145,12 @@ export default function Header() {
           Ana Sayfa
         </Link>{" "}
         <Link href={"/about"}>Ürünler</Link>
-        <Link href={"/blog"}>Hizmetler</Link>
-        <Link href={"/contact"}>Referanslar</Link>
+        <Link to="haber" smooth={true} duration={1000}>
+          Proje ve Hizmetlerimiz
+        </Link>
+        <Link to="haber" smooth={true} duration={1000}>
+          Haberler
+        </Link>
         <Link to="blue" smooth={true} duration={1000}>
           Referanslarımız
         </Link>

@@ -77,7 +77,11 @@ export default function Home() {
               <img style={{ width: "25vh" }} src={`../icons/logo_1.png`}></img>
             </div>
             <div>
-              <img style={{ width: "25vh" }} src={`../icons/logo_4.png`}></img>
+              <img
+                id="haber"
+                style={{ width: "25vh" }}
+                src={`../icons/logo_4.png`}
+              ></img>
             </div>
           </Slider>
         </div>
