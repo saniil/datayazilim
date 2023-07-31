@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import React, { useEffect, useState } from "react";
+import { Highlight } from "@mantine/core";
 
 const HeaderDiv = styled.div`
   background-color: gray;
@@ -54,7 +55,11 @@ const HeaderUstA = styled.div`
   margin-left: 20px;
   gap: 20px;
 `;
-
+const HeaderUstB = styled.div`
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+`;
 const IconIcın = styled.div`
   display: flex;
 `;
@@ -65,7 +70,7 @@ export default function Header() {
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
 
   const handleScroll = () => {
-    if (window.pageYOffset > 100) {
+    if (window.pageYOffset > 10) {
       // Sayfanın 100 piksel altından itibaren sabit kalsın
       setIsHeaderFixed(true);
     } else {
@@ -75,7 +80,7 @@ export default function Header() {
   const [isImage, setImage] = useState(false);
 
   const handleImage = () => {
-    if (window.pageYOffset > 330) {
+    if (window.pageYOffset > 200) {
       setImage(true);
     } else {
       setImage(false);
@@ -121,6 +126,13 @@ export default function Header() {
             <div className="ikinci">+90 232 464 23 83</div>
           </IconIcın>
         </HeaderUstA>
+        <HeaderUstB>
+          <div>
+            <Highlight highlightColor="blue" highlight="indir">
+              Anında destek programını indir
+            </Highlight>
+          </div>
+        </HeaderUstB>
       </HeaderUst>
 
       <HeaderInline isFixed={isHeaderFixed}>
