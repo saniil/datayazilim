@@ -32,6 +32,15 @@ const Hizmetler = styled.div`
 const Dortlu = styled.div`
   margin-top: 10px;
   display: flex;
+  @media (max-width: 1100px) {
+    font-size: 10px;
+  }
+  @media (max-width: 800px) {
+    font-size: 8px;
+  }
+  @media (max-width: 600px) {
+    font-size: 6px;
+  }
 `;
 const Kutu = styled.div`
   width: 400px;

@@ -148,7 +148,10 @@ export default function Header() {
         <Link href={"/blog"}>Hizmetler</Link>
         <Link href={"/contact"}>Referanslar</Link>
         <Link to="blue" smooth={true} duration={1000}>
-          Filmler
+          Referanslarımız
+        </Link>
+        <Link to="iş" smooth={true} duration={1000}>
+          İş Ortaklarımız
         </Link>
       </HeaderInline>
     </HeaderDiv>
