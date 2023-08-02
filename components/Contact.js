@@ -1,71 +1,87 @@
 import styled from "styled-components";
 
 const Ana = styled.div`
-  box-sizing: border-box;
-  background-color: green;
-  margin: auto;
-  height: 50vh;
-`;
-const H1 = styled.div`
-  text-align: center;
-  padding: 10px;
-  box-sizing: border-box;
-  font-size: 30px;
-`;
-
-const Konum = styled.div`
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  padding: 20px;
 `;
-const Baslık = styled.div``;
-const Yazı = styled.div``;
-const Kutu = styled.div`
-  padding: 10px;
-  box-sizing: border-box;
-  background-color: white;
-  border-radius: 3px;
-  margin-left: 1px;
 
-  div {
-    padding: 5px;
-    box-sizing: border-box;
-    font-size: 17px;
+const Icerik = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+`;
+
+const HaritaKutu = styled.div`
+  flex: 1;
+  margin-right: 20px;
+`;
+
+const BilgiKutular = styled.div`
+  display: flex;
+  flex-direction: column; /* Display children vertically */
+`;
+
+const Kutu = styled.div`
+  margin-bottom: 15px;
+  border-top: 1px solid #ccc;
+  &.sa {
+    border-bottom: 1px solid #ccc;
   }
 `;
+
+const Baslık = styled.h3`
+  font-size: 18px;
+  margin-bottom: 10px;
+`;
+
+const Yazı = styled.p`
+  font-size: 16px;
+  color: #555;
+`;
+
 export default function Home() {
   return (
     <Ana id="iletisim">
-      <H1>İletişim</H1>
-      <Konum>
-        <div>
+      <Icerik>
+        <HaritaKutu>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3126.9737722750865!2d27.065108576391125!3d38.39585547614056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdc109f33cbcd%3A0xbb8bef226c8727db!2sData%20Yaz%C4%B1l%C4%B1m%20Bilgisayar%20Hizmetleri!5e0!3m2!1str!2str!4v1690968619955!5m2!1str!2str"
-            width="400"
-            height="300"
-            allowfullscreen=""
+            width="100%"
+            height="400"
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Harita"
           ></iframe>
-        </div>
-        <Kutu>
-          <div>
+        </HaritaKutu>
+        <BilgiKutular>
+          <Kutu>
             <Baslık>Adres</Baslık>
             <Yazı>65/18 Sk. No:9/A Üçkuyular - İZMİR</Yazı>
-          </div>
-          <div>
-            <Baslık>E-Posta</Baslık>
-            <Yazı>bilgi@datayazilim.com.tr</Yazı>
-          </div>
-          <div>
+          </Kutu>
+          <Kutu>
             <Baslık>Telefon</Baslık>
             <Yazı>+90 232 464 23 83</Yazı>
-          </div>
-          <div>
+          </Kutu>
+          <Kutu>
             <Baslık>Faks</Baslık>
             <Yazı>+90 232 463 18 75</Yazı>
-          </div>
-        </Kutu>
-      </Konum>
+          </Kutu>
+          <Kutu className="sa">
+            <Baslık>E-Posta</Baslık>
+            <Yazı>bilgi@datayazilim.com.tr</Yazı>
+          </Kutu>
+        </BilgiKutular>
+      </Icerik>
     </Ana>
   );
 }
