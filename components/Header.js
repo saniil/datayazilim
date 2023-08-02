@@ -9,7 +9,7 @@ const HeaderDiv = styled.div`
 //
 const HeaderInline = styled.div`
   /* Normal header stilini burada belirleyin */
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 1);
   padding: ${(props) => (props.isFixed ? "30px" : "50px")};
   top: ${(props) => (props.isFixed ? "0" : "")};
   display: flex;
@@ -143,8 +143,10 @@ export default function Header() {
         />
         <Link to="home" smooth={true} duration={1000}>
           Ana Sayfa
+        </Link>
+        <Link to="iletisim" smooth={true} duration={1000}>
+          İletişim
         </Link>{" "}
-        <Link href={"/about"}>Ürünler</Link>
         <Link to="haber" smooth={true} duration={1000}>
           Proje ve Hizmetlerimiz
         </Link>

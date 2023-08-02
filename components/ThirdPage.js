@@ -4,7 +4,7 @@ import { Burger } from "@mantine/core";
 import { useState } from "react";
 const Ana = styled.div`
   box-sizing: border-box;
-  height: 100vh;
+  height: 50vh;
   background-color: tomato;
   h1 {
     margin: 0;
