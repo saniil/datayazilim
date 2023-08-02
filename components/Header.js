@@ -147,7 +147,7 @@ export default function Header() {
         <Link to="iletisim" smooth={true} duration={1000}>
           İletişim
         </Link>{" "}
-        <Link to="haber" smooth={true} duration={1000}>
+        <Link to="Proje" smooth={true} duration={1000}>
           Proje ve Hizmetlerimiz
         </Link>
         <Link to="haber" smooth={true} duration={1000}>

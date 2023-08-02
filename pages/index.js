@@ -3,6 +3,7 @@ import FirstPage from "../components/FirstPage";
 import SecondPage from "../components/SecondPage";
 import ThirdPage from "../components/ThirdPage";
 import Contact from "../components/Contact";
+import Projects from "../components/Projects";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <SecondPage></SecondPage>
       <ThirdPage></ThirdPage>
       <Contact></Contact>
+      <Projects></Projects>
     </div>
   );
 }

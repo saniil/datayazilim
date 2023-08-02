@@ -4,7 +4,7 @@ const Ana = styled.div`
   box-sizing: border-box;
   background-color: green;
   margin: auto;
-  height: 70vh;
+  height: 50vh;
 `;
 const H1 = styled.div`
   text-align: center;
