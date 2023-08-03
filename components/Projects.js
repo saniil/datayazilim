@@ -6,7 +6,6 @@ const Ana = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 120vh;
   background-color: #f2f2f2;
 `;
 
@@ -48,7 +47,7 @@ const Metin = styled.div`
 
 export default function Home() {
   return (
-    <Ana id="Proje">
+    <Ana>
       <Baslik>Proje ve Hizmetlerimiz</Baslik>
       <Hizmetler>
         <Hizmet>
@@ -108,7 +107,7 @@ export default function Home() {
           <Icon>💼</Icon>
           <Metin>
             <h2>Datasoft Ticari Paket Programları</h2>
-            <p>
+            <p id="haber">
               1989 yılında İstanbul'da kurulan datasoft Küçük ve Orta Ölçekli
               İşletmeler için Ticari Entegre yazılımları ile Muhasebe Büroları
               için sektörel yazılımlar üretmektedir. 1991 yılından beri

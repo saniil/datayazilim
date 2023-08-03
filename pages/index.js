@@ -1,19 +1,22 @@
-import Header from "../components/Header";
 import FirstPage from "../components/FirstPage";
 import SecondPage from "../components/SecondPage";
 import ThirdPage from "../components/ThirdPage";
 import Contact from "../components/Contact";
 import Projects from "../components/Projects";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
     <div id="home">
-      <Header />
+      <Header></Header>
       <FirstPage></FirstPage>
-      <SecondPage></SecondPage>
-      <ThirdPage></ThirdPage>
-      <Contact></Contact>
       <Projects></Projects>
+      <ThirdPage></ThirdPage>
+
+      <SecondPage></SecondPage>
+      <Contact></Contact>
+      <Footer></Footer>
     </div>
   );
 }
