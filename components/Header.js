@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import React, { useEffect, useState } from "react";
+import { saveAs } from "file-saver";
 
 const HeaderDiv = styled.div`
   background-color: #ffff;
@@ -99,6 +100,19 @@ export default function Header() {
     };
   }, []);
   // ss
+  const handleDownload = () => {
+    const dosyaYolu = process.env.PUBLIC_URL + "/exe/helper.exe";
+
+    fetch(dosyaYolu)
+      .then((response) => response.blob())
+      .then((blob) => {
+        saveAs(blob, "helper.exe");
+      })
+      .catch((error) => {
+        console.error("Dosya indirme hatası:", error);
+      });
+  };
+  //ss
   return (
     <HeaderDiv>
       <HeaderUst>
@@ -127,7 +141,9 @@ export default function Header() {
           </IconIcın>
         </HeaderUstA>
         <HeaderUstB>
-          <div>Anında destek programını indir</div>
+          <a href="#" onClick={handleDownload}>
+            Anında destek programını indir
+          </a>
         </HeaderUstB>
       </HeaderUst>
 
