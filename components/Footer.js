@@ -1,8 +1,9 @@
+import React from "react";
 import styled from "styled-components";
 
 const Footer = styled.footer`
   background-color: #1b4d89;
-  color: black;
+  color: white;
   padding: 20px 0;
 `;
 
@@ -22,9 +23,11 @@ const Logo = styled.img`
   height: 30px;
   margin-right: 10px;
 `;
-const Yazılar = styled.p`
+
+const Yazılar = styled.div`
   display: flex;
   flex-direction: column;
+  color: black;
 `;
 
 export default function Home() {
@@ -32,7 +35,7 @@ export default function Home() {
     <div>
       <Footer>
         <FooterInner>
-          <Logo src={`../icons/logo.svg`} alt="Logo" />
+          <Logo src="../icons/logo.svg" alt="Logo" />
 
           <Yazılar>
             <CopyrightText>&copy; 2023 All Rights Reserved</CopyrightText>
