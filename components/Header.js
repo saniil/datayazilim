@@ -6,9 +6,8 @@ import { saveAs } from "file-saver";
 const HeaderDiv = styled.div`
   background-color: #ffff;
 `;
-//
+
 const HeaderInline = styled.div`
-  /* Normal header stilini burada belirleyin */
   background-color: #1b4d89;
   padding: ${(props) => (props.isFixed ? "30px" : "50px")};
   top: ${(props) => (props.isFixed ? "0" : "")};
@@ -18,67 +17,88 @@ const HeaderInline = styled.div`
   z-index: 100;
   color: white;
   left: 0;
-  width: 100%;
+  width: 100vw;
   transition: all 0.3s;
   box-sizing: border-box;
   position: fixed;
-  @media (max-width: 600px) {
-    justify-content: flex-start;
-    gap: 20px;
-    background-color: lightblue;
-  }
 
-  //   gap: 50px;
-  //   justify-content: flex-end;
-  //   position: fixed;
-  //
+  @media (max-width: 1100px) {
+    padding: ${(props) => (props.isFixed ? "15px" : "30px")};
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: #1b4d89;
+    font-size: 17px;
+    height: 30vh;
+  }
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
+
 const StyledImage = styled.img`
-  /* İstediğiniz stil tanımlarını burada yapabilirsiniz */
   display: ${(props) => (props.isImage ? "flex" : "none")};
   position: relative;
   width: 100px;
   border-radius: 50%;
+  @media (max-width: 1100px) {
+    display: flex;
+  }
 `;
+
 const HeaderUst = styled.div`
   max-width: 1400px;
-  min-width: 500px;
+  min-width: 300px;
   color: black;
   display: flex;
   margin: auto;
-
   justify-content: space-between;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
+
 const HeaderUstA = styled.div`
   display: flex;
   max-width: 1400px;
   margin: 10px;
   margin-left: 20px;
   gap: 20px;
+  @media (max-width: 600px) {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
+
 const HeaderUstB = styled.div`
   margin: 5px;
   padding: 5px;
   border: 2px solid #1b4d89;
 `;
+
 const IconIcın = styled.div`
   display: flex;
+  align-items: center;
+  gap: 5px;
 `;
 
 export default function Header() {
-  // ss
-  // Header display fixed için
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
+  const [isImage, setImage] = useState(false);
 
   const handleScroll = () => {
     if (window.pageYOffset > 10) {
-      // Sayfanın 100 piksel altından itibaren sabit kalsın
       setIsHeaderFixed(true);
     } else {
       setIsHeaderFixed(false);
     }
   };
-  const [isImage, setImage] = useState(false);
 
   const handleImage = () => {
     if (window.pageYOffset > 200) {
@@ -87,19 +107,17 @@ export default function Header() {
       setImage(false);
     }
   };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleImage);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  useEffect(() => {
-    window.addEventListener("scroll", handleImage);
-    return () => {
       window.removeEventListener("scroll", handleImage);
     };
   }, []);
-  // ss
+
   const handleDownload = () => {
     const dosyaYolu = process.env.PUBLIC_URL + "/exe/helper.exe";
 
@@ -112,7 +130,7 @@ export default function Header() {
         console.error("Dosya indirme hatası:", error);
       });
   };
-  //ss
+
   return (
     <HeaderDiv>
       <HeaderUst>
@@ -121,22 +139,21 @@ export default function Header() {
             <img
               style={{ width: "20px", height: "15px" }}
               src={`../icons/current-location.svg`}
-            ></img>
+            />
             <div className="birinci">Karabağlar/İzmir</div>
           </IconIcın>
           <IconIcın>
             <img
               style={{ width: "20px", height: "15px" }}
               src={`../icons/mail.svg`}
-            ></img>
+            />
             <div className="ikinci">bilgi@datayazilim.com.tr</div>
           </IconIcın>
-
           <IconIcın>
             <img
               style={{ width: "20px", height: "15px" }}
               src={`../icons/phone-call.svg`}
-            ></img>
+            />
             <div className="ikinci">+90 232 464 23 83</div>
           </IconIcın>
         </HeaderUstA>
@@ -156,9 +173,6 @@ export default function Header() {
         <Link to="home" smooth={true} duration={1000}>
           Ana Sayfa
         </Link>
-        <Link to="iletisim" smooth={true} duration={1000}>
-          İletişim
-        </Link>{" "}
         <Link to="Proje" smooth={true} duration={1000}>
           Proje ve Hizmetlerimiz
         </Link>
@@ -171,6 +185,9 @@ export default function Header() {
         <Link to="İş" smooth={true} duration={1000}>
           İş Ortaklarımız
         </Link>
+        <Link to="iletisim" smooth={true} duration={1000}>
+          İletişim
+        </Link>{" "}
       </HeaderInline>
     </HeaderDiv>
   );

@@ -13,15 +13,17 @@ const Baslik = styled.h1`
   font-size: 2rem;
   margin: 1em 0;
   color: #333;
+  @media (max-width: 600px) {
+    font-size: 18px;
+  }
 `;
 
 const Hizmetler = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 998vw;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 2em;
   display: flex;
   flex-direction: column;
   gap: 2em;
@@ -32,6 +34,7 @@ const Hizmet = styled.div`
   align-items: center;
   border-top: 1px solid #ccc;
   padding: 1em 0;
+  margin: 0px 10vh 0px 10vh;
 `;
 
 const Icon = styled.div`
@@ -43,6 +46,11 @@ const Metin = styled.div`
   flex: 1;
   padding: 0 1em;
   color: black;
+  h2 {
+    @media (max-width: 600px) {
+      font-size: 18px;
+    }
+  }
 `;
 
 export default function Home() {

@@ -5,6 +5,9 @@ const Footer = styled.footer`
   background-color: #1b4d89;
   color: white;
   padding: 20px 0;
+  @media (max-width: 500px) {
+    font-size: 10px;
+  }
 `;
 
 const FooterInner = styled.div`
@@ -16,6 +19,9 @@ const FooterInner = styled.div`
 const CopyrightText = styled.p`
   margin: 0;
   text-align: center;
+  @media (max-width: 800px) {
+    text-align: left;
+  }
 `;
 
 const Logo = styled.img`
@@ -39,7 +45,7 @@ export default function Home() {
 
           <Yazılar>
             <CopyrightText>&copy; 2023 All Rights Reserved</CopyrightText>
-            <div>Egebis Bilgi İşlem Çözümleri Tekn. Ltd. Şti</div>
+            <div>Data Yazılım Ltd. Şti.</div>
           </Yazılar>
         </FooterInner>
       </Footer>

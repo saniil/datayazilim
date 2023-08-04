@@ -17,6 +17,9 @@ const MainContainer = styled.div`
     font-size: 2rem;
     text-align: center;
     color: #333;
+    @media (max-width: 600px) {
+      font-size: 21px;
+    }
   }
 `;
 
@@ -24,7 +27,7 @@ const NewsBox = styled.div`
   padding: 20px;
   border: 1px solid #ccc;
   background-color: white;
-  width: 400px;
+  width: 42vw;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -34,6 +37,9 @@ const NewsBox = styled.div`
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: black;
+    @media (max-width: 600px) {
+      font-size: 18px;
+    }
   }
 
   p {
@@ -43,6 +49,9 @@ const NewsBox = styled.div`
     font-size: 1rem;
     line-height: 1.5;
     color: #555;
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -80,10 +89,6 @@ export default function Home() {
 
   const [opened, { toggle }] = useDisclosure(false);
   const label = opened ? "Close navigation" : "Open navigation";
-
-  function click() {
-    toggle();
-  }
 
   return (
     <MainContainer>

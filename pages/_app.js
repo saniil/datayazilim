@@ -8,9 +8,7 @@ body{
   font-family: sans-serif;
   a {
     text-decoration: none;
-    & :hover {
-    color: rgba(255, 255, 255, 0.5);
-  }
+    
    
   }
 }`;

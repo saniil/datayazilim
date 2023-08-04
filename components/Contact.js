@@ -18,16 +18,20 @@ const Icerik = styled.div`
   padding: 20px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
   max-width: 800px;
+  @media (max-width: 1100px) {
+    flex-direction: column;
+  }
 `;
 
 const HaritaKutu = styled.div`
   flex: 1;
   margin-right: 20px;
+  min-width: 30vw;
 `;
 
-const BilgiKutular = styled.div`
+const BilgiKutu = styled.div`
   display: flex;
-  flex-direction: column; /* Display children vertically */
+  flex-direction: column;
 `;
 
 const Kutu = styled.div`
@@ -41,11 +45,17 @@ const Kutu = styled.div`
 const Baslık = styled.h3`
   font-size: 18px;
   margin-bottom: 10px;
+  @media (max-width: 600px) {
+    font-size: 15px;
+  }
 `;
 
 const Yazı = styled.p`
   font-size: 16px;
   color: #555;
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
 
 export default function Home() {
@@ -65,7 +75,7 @@ export default function Home() {
               title="Harita"
             ></iframe>
           </HaritaKutu>
-          <BilgiKutular>
+          <BilgiKutu>
             <Kutu>
               <Baslık>Adres</Baslık>
               <Yazı>65/18 Sk. No:9/A Üçkuyular - İZMİR</Yazı>
@@ -82,7 +92,7 @@ export default function Home() {
               <Baslık>E-Posta</Baslık>
               <Yazı>bilgi@datayazilim.com.tr</Yazı>
             </Kutu>
-          </BilgiKutular>
+          </BilgiKutu>
         </Icerik>
       </Ana>
     </div>

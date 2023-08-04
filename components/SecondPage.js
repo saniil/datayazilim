@@ -30,7 +30,7 @@ const SectionTitle = styled.h2`
 
 const StyledSlider = styled(Slider)`
   width: 100%;
-  max-width: 900px;
+  max-width: 40vw;
   margin: 0 auto;
 
   .slick-slide {
@@ -44,11 +44,11 @@ const StyledSlider = styled(Slider)`
     max-width: 25vh;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease; /* Animasyon ekleniyor */
+    transition: transform 0.3s ease;
   }
 
   .slick-active img {
-    transform: scale(1.1); /* Aktif slaytın büyüklüğünü artırır */
+    transform: scale(1.1);
   }
 `;
 
@@ -60,7 +60,7 @@ export default function Home() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,

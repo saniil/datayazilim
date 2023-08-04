@@ -13,7 +13,6 @@ export default function Home() {
       <FirstPage></FirstPage>
       <Projects></Projects>
       <ThirdPage></ThirdPage>
-
       <SecondPage></SecondPage>
       <Contact></Contact>
       <Footer></Footer>
