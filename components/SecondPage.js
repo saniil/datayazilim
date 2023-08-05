@@ -90,7 +90,7 @@ export default function Home() {
               <img src="../icons/4.png" alt="Referans 2" />
             </div>
             <div>
-              <img src="../icons/3.png" alt="Referans 3" />
+              <img src="../icons/efendioğulları.jpg" alt="Referans 3" />
             </div>
             <div>
               <img src="../icons/2.webp" alt="Referans 4" />
